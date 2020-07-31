@@ -25,7 +25,7 @@ while (i < 5): # max 4 pages
                 if "價格" in content: # if the "價錢" character includes in the text, write the content to a local txt file
                     doc.write(content.encode('utf-8') + '==============================='.encode('utf-8'))  # separate posts
                     doc.write('\n'.encode('utf-8')) # change line
-                    time.sleep(sleeptime(0,0,3)) # sleepTime. Prevent IP blocking
+                    time.sleep(sleepTime(0,0,3)) # sleepTime. Prevent IP blocking
     else :
         print("No More Pages") # status code != 200. Pages not exist
     i = i + 1
