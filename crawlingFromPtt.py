@@ -10,7 +10,7 @@ doc = io.open("Biding Price.txt", "ab+") # create file to document the data,
 #ab+ : if file exist, point to the end. If not create a new one
 i = 1 # start from the first page
 while (i < 5): # max 4 pages
-    link = "https://www.ptt.cc/bbs/Headphone/search?page=" + str(i) + "&q=airpods" # target link
+    link = "https://www.ptt.cc/bbs/MacShop/search?page=" + str(i) + "&q=airpods" # target link
     req = rq.get(link) # Use GET method
     if req.status_code == 200: # if request success
         soup = BeautifulSoup(req.text, "lxml") #change to lxml
