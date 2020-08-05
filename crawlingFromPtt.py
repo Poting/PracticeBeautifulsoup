@@ -16,7 +16,7 @@ while (i < 5): # max 4 pages
         soup = BeautifulSoup(req.text, "lxml") #change to lxml
         for post in soup.find_all('a'): # find all <a> tag 
             postTitle = post.get_text() # get the title of the post
-            if "交易" in postTitle: # If the post is categorized as 'transaction'
+            if "販售" in postTitle: # If the post is categorized as 'transaction'
                 postLink = "https://www.ptt.cc" + post.get('href') # link of the current post
                 time.sleep(3) # wait time, prevent IP blocking because of frequently request 
                 contReq = rq.get(postLink) # HTTP get request
